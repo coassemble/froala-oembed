@@ -1,0 +1,26 @@
+.fr-oembed {
+  border: solid 1px transparent;
+}
+.fr-oembed:hover {
+  border-color: #af4f4b;
+}
+.fr-oembed.fr-active {
+  border-color: #1e88e5;
+}
+.fr-oembed > .embed-responsive-item {
+  user-select: none;
+}
+.fr-element .fr-oembed::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  display: block;
+  background: rgba(0, 0, 0, 0);
+}
+.fr-element .fr-oembed.fr-active::after {
+  display: none;
+}
