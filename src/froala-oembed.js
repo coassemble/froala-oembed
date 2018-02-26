@@ -6,7 +6,7 @@
   });
   $.extend($.FE.DEFAULTS, {
     oembedEditButtons: ['oembedReplace', 'oembedRemove'],
-    oembedEmbedFactory: src => $('<iframe>').attr({src}),
+    oembedEmbedFactory: src => Promise.resolve($('<iframe>').attr({src})),
     oembedInsertButtons: ['oembedBack'],
     oembedMove: true,
     oembedSplitHtml: false,
