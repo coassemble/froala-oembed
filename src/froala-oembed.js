@@ -73,7 +73,6 @@
       editor.opts.oembedEmbedFactory(src).then(function(embed) {
         editor.popups.hide('oembed.insert');
         $oembed.html(embed).removeClass('fr-uploading');
-        editor.edit.on();
       });
 
       return $oembed;
@@ -87,13 +86,11 @@
       editor.opts.oembedEmbedFactory(src).then(function(embed) {
         editor.popups.hide('oembed.insert');
         $oembed.html(embed).removeClass('fr-uploading');
-        editor.edit.on();
         stopEditing($oembed);
       });
     };
 
     const insertOembed = function(url) {
-      editor.edit.off();
       const replace = !!currentOembed;
       const $oembed = replace ? replaceOembed(currentOembed, url) : addNewOembed(url);
 
