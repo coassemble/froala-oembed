@@ -1,13 +1,13 @@
-.fr-oembed {
+.fr-element .fr-oembed {
   border: solid 1px transparent;
 }
-.fr-oembed:hover {
+.fr-element .fr-oembed:hover {
   border-color: #af4f4b;
 }
-.fr-oembed.fr-active {
+.fr-element .fr-oembed.fr-active {
   border-color: #1e88e5;
 }
-.fr-oembed > .embed-responsive-item {
+.fr-element .fr-oembed > .embed-responsive-item {
   user-select: none;
 }
 .fr-element .fr-oembed::after {
