@@ -152,6 +152,7 @@
             .removeAttr('contenteditable')
             .removeAttr('draggable')
             .removeClass('fr-draggable')
+            .removeClass('fr-uploading')
             .empty();
           return $src.html();
         });
