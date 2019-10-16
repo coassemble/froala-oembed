@@ -3,7 +3,7 @@
 	"description": "Plugin for embedding external content, accessible through oEmbed, into the Froala WYSIWYG Editor.",
 	"version": "1.0.3",
 	"main": "./froala-oembed.js",
-	"repository": "https://github.com/ecoach-lms/froala-oembed",
+	"repository": "https://github.com/coassemble/froala-oembed",
 	"keywords": [
 		"froala",
 		"froala-plugin",

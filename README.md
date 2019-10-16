@@ -52,7 +52,7 @@ The buttons that appear in the edit-oEmbed popup when an existing oEmbed widget 
 
 Perhaps the most important option, the embed factory is a function that froala-oembed will use to display oEmbedded content. The URL of the content will be passed in, and a promise for that content's embeddable form should be returned. Either a string of HTML or a jQuery element may be returned, whichever is easier for the factory to produce.
 
-As you can see, the default implementation is simply to generate an `<iframe>` with no special behaviour. This works for some sites, but many sites refuse to be displayed in an `<iframe>` and so won't work. Therefore, we recommend you override the factory with one of your own that's a lot smarter - for example, here at eCoach.com we use an embed factory that calls [Iframely](https://iframely.com/) and fetches HTML from its API.
+As you can see, the default implementation is simply to generate an `<iframe>` with no special behaviour. This works for some sites, but many sites refuse to be displayed in an `<iframe>` and so won't work. Therefore, we recommend you override the factory with one of your own that's a lot smarter - for example, here at Coassemble we use an embed factory that calls [Iframely](https://iframely.com/) and fetches HTML from its API.
 
 ### `oembedInsertButtons`
 
@@ -77,13 +77,13 @@ Allows a new oEmbed widget to split apart existing HTML when it is inserted. Not
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/ecoach-lms/froala-oembed/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/coassemble/froala-oembed/tags). 
 
 ## Authors
 
 * **Danielle McLean** - [00dani](https://github.com/00dani)
 
-See also the list of [contributors](https://github.com/ecoach-lms/froala-oembed/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/coassemble/froala-oembed/contributors) who participated in this project.
 
 ## License
 
