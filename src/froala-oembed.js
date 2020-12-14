@@ -14,7 +14,7 @@
 
   FE.PLUGINS.oembed = function(editor) {
     const refreshInsertPopup = function() {
-      const popup = editor.popups.get('oembed.insert');
+      const popup = $(editor.popups.get('oembed.insert'));
       const $inputs = popup.find('input, button');
       $inputs.prop('disabled', false).val('').trigger('change');
       popup.find('fr-buttons').toggleClass('fr-hidden', !currentOembed);
@@ -220,7 +220,7 @@
       },
       insertByURL(url) {
         if (!url) {
-          const popup = editor.popups.get('oembed.insert');
+          const popup = $(editor.popups.get('oembed.insert'));
           url = (popup.find('.fr-oembed-by-url-layer input[type="text"]').val() || '').trim();
           popup.find('input, button').prop({disabled: true});
         }
