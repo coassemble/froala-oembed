@@ -12,6 +12,12 @@
     oembedSplitHtml: false,
   });
 
+  // This SVG icon is licensed under Apache 2.0 and was retrieved from
+  // https://material.io/resources/icons/?search=audio&icon=dvr&style=baseline
+  $.extend(FE.SVG, {
+    insertOembed: 'M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 1.99-.9 1.99-2L23 5c0-1.1-.9-2-2-2zm0 14H3V5h18v12zm-2-9H8v2h11V8zm0 4H8v2h11v-2zM7 8H5v2h2V8zm0 4H5v2h2v-2z'
+  });
+
   FE.PLUGINS.oembed = function(editor) {
     const refreshInsertPopup = function() {
       const popup = $(editor.popups.get('oembed.insert'));
@@ -285,7 +291,7 @@
     };
   };
 
-  FE.DefineIcon('insertOembed', {NAME: 'television', FA5NAME: 'tv', template: 'font_awesome'});
+  FE.DefineIcon('insertOembed', {NAME: 'television', FA5NAME: 'tv', SVG_KEY: 'insertOembed'});
   FE.RegisterCommand('insertOembed', {
     title: 'Insert Embeddable Content',
     undo: false,
