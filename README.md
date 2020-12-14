@@ -6,6 +6,8 @@ A simple plugin for [Froala WYSIWYG Editor](https://www.froala.com/wysiwyg-edito
 
 This plugin requires Froala Editor >= 2.0.0 - it was developed under 2.7.5.
 
+Froala Editor 3 is also supported, but you must provide your own jQuery - Froala 3 does not depend on jQuery and this plugin does. We developed under jQuery 3.5.0.
+
 ## Installing
 
 Add `froala-oembed` to your package.json:
