@@ -1,8 +1,7 @@
 extends: eslint:recommended
 env:
   browser: true
-parserOptions:
-  ecmaVersion: 6
+  es6: true
 rules:
   array-bracket-spacing: error
   block-spacing: error
