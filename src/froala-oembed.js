@@ -285,7 +285,7 @@
     };
   };
 
-  FE.DefineIcon('insertOembed', {NAME: 'television'});
+  FE.DefineIcon('insertOembed', {NAME: 'television', FA5NAME: 'tv', template: 'font_awesome'});
   FE.RegisterCommand('insertOembed', {
     title: 'Insert Embeddable Content',
     undo: false,
@@ -311,7 +311,7 @@
     }
   });
 
-  FE.DefineIcon('oembedReplace', {NAME: 'exchange'});
+  FE.DefineIcon('oembedReplace', {NAME: 'exchange', FA5NAME: 'exchange-alt', SVG_KEY: 'replaceImage'});
   FE.RegisterCommand('oembedReplace', {
     title: 'Replace',
     undo: false,
@@ -323,7 +323,7 @@
     }
   });
 
-  FE.DefineIcon('oembedRemove', {NAME: 'trash'});
+  FE.DefineIcon('oembedRemove', {NAME: 'trash', SVG_KEY: 'remove'});
   FE.RegisterCommand('oembedRemove', {
     title: 'Remove',
     callback() {
@@ -331,7 +331,7 @@
     }
   });
 
-  FE.DefineIcon('oembedBack', {NAME: 'arrow-left'});
+  FE.DefineIcon('oembedBack', {NAME: 'arrow-left', SVG_KEY: 'back'});
   FE.RegisterCommand('oembedBack', {
     title: 'Back',
     undo: false,
