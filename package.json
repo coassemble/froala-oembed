@@ -1,7 +1,7 @@
 {
 	"name": "froala-oembed",
 	"description": "Plugin for embedding external content, accessible through oEmbed, into the Froala WYSIWYG Editor.",
-	"version": "1.1.0",
+	"version": "1.2.0",
 	"main": "./froala-oembed.js",
 	"repository": "https://github.com/coassemble/froala-oembed",
 	"keywords": [
