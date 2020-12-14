@@ -1,10 +1,10 @@
-(function($) {
+(function(FE, $) {
   'use strict';
-  $.extend($.FE.POPUP_TEMPLATES, {
+  $.extend(FE.POPUP_TEMPLATES, {
     'oembed.insert': '[_BUTTONS_][_BY_URL_LAYER_]',
     'oembed.edit': '[_BUTTONS_]'
   });
-  $.extend($.FE.DEFAULTS, {
+  $.extend(FE.DEFAULTS, {
     oembedEditButtons: ['oembedReplace', 'oembedRemove'],
     oembedEmbedFactory: src => Promise.resolve($('<iframe>').attr({src})),
     oembedInsertButtons: ['oembedBack'],
@@ -12,7 +12,7 @@
     oembedSplitHtml: false,
   });
 
-  $.FE.PLUGINS.oembed = function(editor) {
+  FE.PLUGINS.oembed = function(editor) {
     const refreshInsertPopup = function() {
       const popup = editor.popups.get('oembed.insert');
       const $inputs = popup.find('input, button');
@@ -285,8 +285,8 @@
     };
   };
 
-  $.FE.DefineIcon('insertOembed', {NAME: 'television'});
-  $.FE.RegisterCommand('insertOembed', {
+  FE.DefineIcon('insertOembed', {NAME: 'television'});
+  FE.RegisterCommand('insertOembed', {
     title: 'Insert Embeddable Content',
     undo: false,
     focus: true,
@@ -303,7 +303,7 @@
     plugin: 'oembed'
   });
 
-  $.FE.RegisterCommand('oembedInsertByURL', {
+  FE.RegisterCommand('oembedInsertByURL', {
     undo: true,
     focus: true,
     callback() {
@@ -311,8 +311,8 @@
     }
   });
 
-  $.FE.DefineIcon('oembedReplace', {NAME: 'exchange'});
-  $.FE.RegisterCommand('oembedReplace', {
+  FE.DefineIcon('oembedReplace', {NAME: 'exchange'});
+  FE.RegisterCommand('oembedReplace', {
     title: 'Replace',
     undo: false,
     focus: false,
@@ -323,16 +323,16 @@
     }
   });
 
-  $.FE.DefineIcon('oembedRemove', {NAME: 'trash'});
-  $.FE.RegisterCommand('oembedRemove', {
+  FE.DefineIcon('oembedRemove', {NAME: 'trash'});
+  FE.RegisterCommand('oembedRemove', {
     title: 'Remove',
     callback() {
       this.oembed.remove();
     }
   });
 
-  $.FE.DefineIcon('oembedBack', {NAME: 'arrow-left'});
-  $.FE.RegisterCommand('oembedBack', {
+  FE.DefineIcon('oembedBack', {NAME: 'arrow-left'});
+  FE.RegisterCommand('oembedBack', {
     title: 'Back',
     undo: false,
     focus: false,
@@ -345,8 +345,8 @@
     }
   });
 
-  if (!$.FE.RegisterQuickInsertButton) return;
-  $.FE.RegisterQuickInsertButton('oembed', {
+  if (!FE.RegisterQuickInsertButton) return;
+  FE.RegisterQuickInsertButton('oembed', {
     icon: 'insertOembed',
     requiredPlugin: 'oembed',
     title: 'Insert Embeddable Content',
@@ -356,4 +356,4 @@
       if (src) this.oembed.insertByURL(src);
     }
   });
-})(window.jQuery);
+})(window.FroalaEditor || window.jQuery.FE, window.jQuery);
